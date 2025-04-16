@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quem Somos | NeuroFocus</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+<!-- Fontes -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6a4c93;
+      --secondary: #8a5a44;
+      --accent: #f8d800;
+      --dark: #343a40;
+      --light: #f7f7f7;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light);
+      line-height: 1.6;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 1px;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: var(--accent);
+    }
+    
+    .section {
+      padding: 80px 0;
+    }
+    
+    .team-card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+      overflow: hidden;
+    }
+    
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .team-img {
+      height: 500px;
+      object-fit: cover;
+      object-position: top;
+    }
+    
+    .mission-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      height: 100%;
+    }
+    
+    .footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 30px 0;
+    }
+    
+    .nav-pills .nav-link.active {
+      background-color: var(--primary);
+    }
+    
+    .nav-pills .nav-link {
+      color: var(--dark);
+    }
+    
+    .history-timeline {
+      position: relative;
+      padding-left: 50px;
+    }
+    
+    .history-timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: var(--primary);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -43px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: white;
+      border: 4px solid var(--primary);
+    }
+    
+    .timeline-date {
+      font-weight: bold;
+      color: var(--primary);
+    }
+    /* Estilos do Menu */
+.navbar {
+  padding: 15px 0;
+  transition: all 0.3s;
+}
+
+.navbar.scrolled {
+  padding: 10px 0;
+  background-color: rgba(52, 58, 64, 0.95) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 8px 15px !important;
+  border-radius: 5px;
+  margin: 0 3px;
+  transition: all 0.3s;
+}
+
+.nav-link:hover, .nav-link:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link i {
+  font-size: 1.1rem;
+}
+
+/* Menu ativo */
+.nav-link.active {
+  color: #f8d800 !important;
+  font-weight: 600;
+}
+
+/* Botão de Download */
+.btn-download {
+  background-color: #f8d800;
+  color: #343a40;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 8px 20px;
+  transition: all 0.3s;
+}
+
+.btn-download:hover {
+  background-color: #e6c200;
+  transform: scale(1.05);
+}
+  </style>
+</head>
+<body>
+  <!-- Menu de Navegação -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+  <div class="container">
+    <!-- Logo/Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <i class="bi bi-lightbulb-fill me-2" style="color: #f8d800; font-size: 1.5rem;"></i>
+      <span class="fw-bold">NeuroFocus</span>
+    </a>
+    
+    <!-- Botão Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Itens do Menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="bi bi-house-door me-1"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <i class="bi bi-people me-1"></i> Quem Somos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="funcionalidades.html">
+            <i class="bi bi-star me-1"></i> Funcionalidades
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            <i class="bi bi-envelope me-1"></i> Contato
+          </a>
+        </li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <a href="https://wa.me/5567992997470?text=Ol%C3%A1,%20Meu%20nome%20%C3%A9:%20............%20gostaria%20de%20Cadastra%20para%20acesso%20antecipado!%20no%20App%20NeuroFocus%20" class="btn btn-warning fw-bold">
+            <i class="bi bi-download me-1"></i> Baixar App
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Cabeçalho -->
+  <header class="header text-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold mb-3">Quem Somos</h1>
+      <p class="lead fs-4">Conheça a equipe por trás do NeuroFocus e nossa missão</p>
+    </div>
+  </header>
+
+  <!-- Navegação -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">NeuroFocus</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">Quem Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Nossa História -->
+  <section class="section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="mb-4">Nossa História</h2>
+          <p>O NeuroFocus nasceu em 2023 como um projeto de pesquisa na Universidade Federal, quando o fundador Eliandro Silva, diagnosticado com TDAH, percebeu a falta de ferramentas de produtividade realmente eficazes para pessoas neurodivergentes.</p>
+          <p>Após testar diversos métodos tradicionais sem sucesso, ele reuniu uma equipe multidisciplinar para desenvolver uma solução que considerasse as particularidades cognitivas do TDAH.</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Equipe trabalhando" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Linha do Tempo -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Nossa Jornada</h2>
+      <div class="history-timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2025</div>
+          <h4>Ideia Inicial</h4>
+          <p>Primeiros protótipos desenvolvidos como projeto de pesquisa acadêmica na Faculdade Senac Hub Academy</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2025/26</div>
+          <h4>Testes com Usuários</h4>
+          <p>Parceria com associações de TDAH para testes com mais de 200 usuários</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2026</div>
+          <h4>Versão Beta</h4>
+          <p>Lançamento da versão beta com feedbacks extremamente positivos da comunidade</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Futuro</div>
+          <h4>Expansão</h4>
+          <p>Planejamento para incluir funcionalidades para outros tipos de neurodivergências</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nossa Equipe -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center mb-5">Conheça Nossa Equipe</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="team-card">
+            <img src="eliandro.png" class="card-img-top team-img" alt="Eliandro Silva">
+            <div class="card-body text-center">
+              <h5 class="card-title">Eliandro Silva</h5>
+              <p class="text-muted">Fundador & CEO</p>
+              <p class="card-text">Psicólogo com TDAH e mestre em Neurociência Cognitiva. Idealizador do projeto.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-card">
+            <img src="heinrich.png" class="card-img-top team-img" alt="Dra. Ana Lúcia">
+            <div class="card-body text-center">
+              <h5 class="card-title">Heinrich Feltrin</h5>
+              <p class="text-muted">Co-FundadorDesenvolvedor UX</p>
+              <p class="card-text">Especialista em TDAH em adultos e consultora científica do projeto.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-card">
+            <img src="jowilson.png" class="card-img-top team-img" alt="Carlos Mendes">
+            <div class="card-body text-center">
+              <h5 class="card-title">Jowilson Nunes</h5>
+              <p class="text-muted">Co-Fundador</p>
+              <p class="card-text">Especialista em design inclusivo e pai de uma criança com TDAH.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Missão, Visão e Valores -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Nossos Princípios</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="mission-card">
+            <div class="text-center mb-4">
+              <i class="bi bi-bullseye fs-1 text-primary"></i>
+            </div>
+            <h4 class="text-center">Missão</h4>
+            <p class="text-center">Criar ferramentas de produtividade que respeitem e se adaptem às diferentes formas de funcionamento cerebral, especialmente para pessoas com TDAH.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mission-card">
+            <div class="text-center mb-4">
+              <i class="bi bi-eye fs-1 text-primary"></i>
+            </div>
+            <h4 class="text-center">Visão</h4>
+            <p class="text-center">Ser referência mundial em soluções de produtividade inclusivas, ajudando pessoas neurodivergentes a alcançar seu potencial máximo.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mission-card">
+            <div class="text-center mb-4">
+              <i class="bi bi-heart fs-1 text-primary"></i>
+            </div>
+            <h4 class="text-center">Valores</h4>
+            <ul>
+              <li>Empatia acima de tudo</li>
+              <li>Ciência como base</li>
+              <li>Inclusão real</li>
+              <li>Melhoria contínua</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>NeuroFocus</h5>
+          <p>Produtividade gamificada para TDAH</p>
+          <p>By Eliandro Silva | Heinrich Feltrin | 
+            Jowilson Nunes - Facudade Senac Hub Academy</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="contato.html" class="text-white me-3"><i class="bi bi-envelope me-1"></i> Contato</a>
+          <a href="#" class="text-white me-3"><i class="bi bi-file-text me-1"></i> Termos</a>
+          <a href="#" class="text-white"><i class="bi bi-shield-lock me-1"></i> Privacidade</a>
+        </div>
+      </div>
+      <hr class="my-4 bg-secondary">
+      <p class="mb-0 small">&copy; 2025 NeuroFocus. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts do Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script>
+    // Adicionar efeito ao scroll
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// Ativar item do menu atual
+document.addEventListener('DOMContentLoaded', function() {
+  const currentPage = location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+});
+  </script>
+</body>
+</html>
